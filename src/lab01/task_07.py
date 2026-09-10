@@ -10,14 +10,12 @@ IDletter1 = 0
 IDletter2 = 0
 for i in range(len(code)):
     if code[i] != (code[i]).lower():
-#        s += code[i]
         IDletter1 = i
-        break #!!
+        break
 for i in range(len(code)):
     if code[i] in '0123456789':
-#        s += code[i+1]
         IDletter2 = i
-        break #!!
+        break
 step = abs(IDletter2-IDletter1)
 lastletter = IDletter1
 st = 2
