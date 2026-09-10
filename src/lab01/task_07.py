@@ -24,7 +24,6 @@ st = 2
 for i in range(IDletter1,len(code)):
     if code[i] == '.':
         break
-    print(st,step,i,code[i])
     if st == step:
         st = 0
         s += code[i]
