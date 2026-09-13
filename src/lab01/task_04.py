@@ -1,2 +1,4 @@
 time = int(input('Минуты: '))
-print('%s:%d' % (time//60, time%60))
+hh = time//60
+mm = time%60
+print(f'{hh}:{mm:02d}')
