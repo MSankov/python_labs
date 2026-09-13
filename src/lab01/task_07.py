@@ -8,23 +8,28 @@ code = input('in: ')
 s = ''
 IDletter1 = 0
 IDletter2 = 0
+
 for i in range(len(code)):
     if code[i] != (code[i]).lower():
         IDletter1 = i
         break
-for i in range(len(code)):
+
+for i in range(IDletter1+1, len(code)):
     if code[i] in '0123456789':
         IDletter2 = i
         break
+
 step = abs(IDletter2-IDletter1)
 lastletter = IDletter1
-st = 2
+st = 0
 for i in range(IDletter1,len(code)):
-    if code[i] == '.':
-        break
-    if st == step:
-        st = 0
+    if st == 0:
+        st = step
         s += code[i]
     else:
-        st+=1
+        st-=1
+
+    if code[i] == '.':
+        break
+
 print(s)
