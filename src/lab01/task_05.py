@@ -6,6 +6,6 @@ m = snnf.split()
 inc = ''
 for i in m:
     inc += (i[0]).upper()
-print('Инициалы: %s' %(inc))
+print('Инициалы: %s.' %(inc))
 print('Длина (символов): %s' %(len(' '.join(m))))
 

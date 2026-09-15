@@ -8,4 +8,4 @@ for i in range(n):
         tr += 1
     else:
         fl += 1
-print(tr, fl)
+print(f'out: {tr} {fl}')
