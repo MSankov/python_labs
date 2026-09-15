@@ -20,7 +20,6 @@ for i in range(IDletter1+1, len(code)):
         break
 
 step = abs(IDletter2-IDletter1)
-lastletter = IDletter1
 st = 0
 for i in range(IDletter1,len(code)):
     if st == 0:
