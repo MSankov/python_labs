@@ -31,4 +31,4 @@ for i in range(IDletter1,len(code)):
     if code[i] == '.':
         break
 
-print(s)
+print(f'out: {s}')
