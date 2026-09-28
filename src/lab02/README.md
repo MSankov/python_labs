@@ -7,9 +7,9 @@
   
 _Демонстрация первой функции_
 ![Демонстрация первой функции](/images/lab02/task1_f1.png)
-`print(min_max([1, 2, 3, 4, 5.987, 0,]))
-print(min_max([42]))
-print(min_max([-5, -2, -9]))
+`print(min_max([1, 2, 3, 4, 5.987, 0,]))  
+print(min_max([42]))  
+print(min_max([-5, -2, -9]))  
 print(min_max([]))`
 
   
