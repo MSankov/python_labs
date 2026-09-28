@@ -106,20 +106,18 @@ def mat_is_rect(matrix: list[list]):
 
 
 
-#print(transpose([[1,2],[3,4],[5,6]]))
-#print(transpose([1, 2, 3]))
+'''print(transpose([[1, 2, 3]]))
+print(transpose([[1], [2], [3]]))
+print(transpose([[1, 2], [3, 4]]))
+print(transpose([]))
+print(transpose([[1, 2], [3]]))'''
 
 '''print(row_sums([[1, 2, 3], [4, 5, 6]]))
 print(row_sums([[-1, 1], [10, -10]]))
 print(row_sums([[0, 0], [0, 0]]))
 print(row_sums([[1, 2], [3]]))'''
 
-'''col_sums
 
-[[1, 2, 3], [4, 5, 6]] → [5, 7, 9]
-[[-1, 1], [10, -10]] → [9, -9]
-[[0, 0], [0, 0]] → [0, 0]
-[[1, 2], [3]] → ValueError (рваная)'''
 print(col_sums([[1, 2, 3], [4, 5, 6]]))
 print(col_sums([[-1, 1], [10, -10]]))
 print(col_sums([[0, 0], [0, 0]]))
