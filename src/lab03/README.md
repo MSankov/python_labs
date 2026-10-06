@@ -7,21 +7,23 @@
   
 _Убрать невидимые управляющие символы_
 ![Демонстрация первой функции](/images/lab03/task1.png)
-`print(normalize("ПрИвЕт\nМИр\t"))`
-`print(normalize("ёжик, Ёлка", yo2e=True))`
-`print(normalize("Hello\r\nWorld"))`
-`print(normalize("  двойные   пробелы  "))`
+`print(normalize("ПрИвЕт\nМИр\t"))`  
+`print(normalize("ёжик, Ёлка", yo2e=True))`  
+`print(normalize("Hello\r\nWorld"))`  
+`print(normalize("  двойные   пробелы  "))`  
 
 ---
+
 _азбить на «слова» по небуквенно-цифровым разделителям._
 ![Демонстрация первой функции](/images/lab03/task2.png)
-`print(tokenize("привет мир"))`
-`print(tokenize("hello,world!!!"))`
-`print(tokenize("по--настоящему круто"))`
-`print(tokenize("доброта - это хорошо"))`
-`print(tokenize("emoji 😀 не слово"))`
-
+`print(tokenize("привет мир"))`  
+`print(tokenize("hello,world!!!"))`  
+`print(tokenize("по--настоящему круто"))`  
+`print(tokenize("доброта - это хорошо"))`  
+`print(tokenize("emoji 😀 не слово"))`  
+  
 ---
+  
 _Подсчитать частоты, вернуть словарь слово → количество_
 ![Демонстрация первой функции](/images/lab03/task3.png)
 `print(count_freq(["a","b","a","c","b","a"]))`
