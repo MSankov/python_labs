@@ -1,7 +1,8 @@
 ## Мои библиотеки 
+[text.py](/src/lib/text.py)
   
 **normalize** 
-  
+
 *Ввод*: `text: str, casefold = True, yo2e = True`  
 *Вывод*: `str`  
   
