@@ -1,5 +1,5 @@
 ## Мои библиотеки 
-[text.py](/src/lib/text.py)
+[text.py](/src/libs/text.py)
   
 **normalize** 
 
