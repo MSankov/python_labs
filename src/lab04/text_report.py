@@ -1,42 +1,17 @@
 from src.libs.text import *
 from pathlib import Path
-def read_text(path: str | Path, encoding: str = "utf-8"):
+from src.lab04.io_txt_csv import *
 
-    '''Открывает файл на чтение в указанной кодировке и возвращает содержимое как одну строку.
-        
-        Args:
-            str | Path
-            
-        Returns:
-            str
-        
-        Raises:
-            FileNotFoundError - если файл не найден
-            UnicodeDecodeError  - если кодировка не подходит
-            '''
-    with open(path, encoding="utf-8") as f:
-        f = normalize(f)
-        f = tokenize(f)
-        sl = count_freq(f)
-        top = top_n(sl, n = 5)
-    return len(f), len(sl), top 
-    
-def write_csv(rows: Iterable[Sequence], path: str | Path,
-              header: tuple[str, ...] | None = None) -> None:
-    for i in range(len(rows)):
-        if len(rows[i]) != len(rows[i+1]):
-            raise ValueError('в атрибуте rows строки имеют разные длины')
-    p = Path(path)
-    rows = list(rows)
-    with p.open("w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
-        if header is not None:
-            w.writerow(header)
-        for r in rows:
-            w.writerow(r)
 
-write_csv(sl,'data/report.csv',('word','count'))
-s = read_text('data/input.txt')
-print(f'Всего слов: {s[0]}')
-print(f'Уникальных слов: {s[1]}')
-print(f'Топ-5: {list(s[2])}')
+
+data = read_text('data/lab04/input.txt')
+data = normalize(data)
+w = tokenize(data)
+sl = count_freq(w)
+top = top_n(sl, n = 5)
+
+
+write_csv(list(sl.items()),'data/lab04/report.csv',('word','count'))
+print(f'Всего слов: {len(w)}')
+print(f'Уникальных слов: {len(sl)}')
+print(f'Топ-5: {print_table(top)}')
