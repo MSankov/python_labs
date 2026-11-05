@@ -1,10 +1,10 @@
 [
-  {
-    "word": "sdfsd",
-    "count": "12"
-  },
-  {
-    "word": "sdfdf",
-    "count": "1"
-  }
+	{
+		"name": "Миша",
+		"age": "22"
+	},
+	{
+		"name": "Bob",
+		"age": "25"
+	}
 ]

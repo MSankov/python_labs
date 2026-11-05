@@ -14,7 +14,11 @@ def json_to_csv(json_path: str, csv_path: str) -> None:
     with json_p.open('r', encoding="utf-8") as f:
         data = json.load(f)
 
-    header = list(data[0].keys())
+    header = set()
+    for el in data:
+        header = header | el.keys()
+
+
 
     with csv_p.open('w', newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames = header)
@@ -40,8 +44,6 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
     
 
     with json_p.open("w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+        json.dump(data, f, ensure_ascii=False, indent='\t')
 
 csv_to_json('data/samples/people.csv', 'data/out/people_from_csv.json')
-
-    
