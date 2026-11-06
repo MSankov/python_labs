@@ -6,6 +6,7 @@
 *Вывод*: {name2}.csv / {name2}.json
   
 _Перевести из json в csv_
+  
 ![Демонстрация первой функции](/images/lab05/json1.png)  
 ![Демонстрация первой функции](/images/lab05/csv1.png)    
 `json_to_csv('data/samples/people.json', 'data/out/people_from_json.csv')`  
