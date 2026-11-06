@@ -2,6 +2,9 @@ import re
 from pathlib import Path
 from typing import Iterable, Sequence
 import csv
+from openpyxl import Workbook
+from openpyxl.utils.cell import get_column_letter
+import json
 
 def normalize(text: str, *, casefold: bool = True, yo2e: bool = True):
     '''Убирает невидимые управляющие символы (например, \t, \r) → заменяет на пробелы,
@@ -113,6 +116,9 @@ def read_text(path: str | Path, encoding: str = "utf-8"):
 
 def write_csv(rows: Iterable[Sequence], path: str | Path,
               header: tuple[str, ...] | None = None) -> None:
+    '''
+    Создает/перезаписывает CSV с разделителем ,
+    '''
     p = Path(path)
     rows = list(rows) 
 
@@ -127,4 +133,74 @@ def write_csv(rows: Iterable[Sequence], path: str | Path,
         for r in rows:
             w.writerow(r)
 
-print(read_text(r'data/lab04/input.txt'))
+
+def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
+    """
+    Конвертирует CSV в XLSX.
+    Использовать openpyxl ИЛИ xlsxwriter.
+    Первая строка CSV — заголовок.
+    Лист называется "Sheet1".
+    Колонки — автоширина по длине текста (не менее 8 символов).
+    """
+
+    csv_p = Path(csv_path)
+    xlsx_p = Path(xlsx_path)
+    max_len = dict()
+    MIN_LEN = 8
+
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "Sheet1"
+
+    with open(csv_p, encoding="utf-8") as f:
+        r = csv.reader(f)
+        for row in r:
+            for indx in range(len(row)):
+                max_len[indx] = max(len(row[indx]),max_len.get(indx, MIN_LEN))
+            ws.append(row)
+        for indx in range(len(max_len)):
+            ws.column_dimensions[get_column_letter(indx+1)].width = max_len[indx]
+        wb.save(xlsx_p)
+
+
+
+def json_to_csv(json_path: str, csv_path: str) -> None:
+    """
+    Преобразует JSON-файл в CSV.
+    Поддерживает список словарей [{...}, {...}], заполняет отсутствующие поля пустыми строками.
+    Кодировка UTF-8. Порядок колонок — как в первом объекте или алфавитный (указать в README).
+    """
+    json_p = Path(json_path)
+    csv_p = Path(csv_path)
+    with json_p.open('r', encoding="utf-8") as f:
+        data = json.load(f)
+
+    header = set()
+    for el in data:
+        header = header | el.keys()
+
+
+
+    with csv_p.open('w', newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames = header)
+        writer.writeheader()
+        writer.writerows(data)
+
+
+
+def csv_to_json(csv_path: str, json_path: str) -> None:
+    """
+    Преобразует CSV в JSON (список словарей).
+    Заголовок обязателен, значения сохраняются как строки.
+    json.dump(..., ensure_ascii=False, indent=2)
+    """
+    csv_p = Path(csv_path)
+    json_p = Path(json_path)
+
+    with open(csv_path, encoding="utf-8") as f:
+        r = csv.DictReader(f)
+        data = list(r)
+    
+
+    with json_p.open("w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent='\t')

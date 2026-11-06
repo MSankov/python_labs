@@ -1,7 +1,6 @@
 from openpyxl import Workbook
 import csv
 from pathlib import Path
-import csv
 from openpyxl.utils.cell import get_column_letter
 
 def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
@@ -32,4 +31,4 @@ def csv_to_xlsx(csv_path: str, xlsx_path: str) -> None:
             ws.column_dimensions[get_column_letter(indx+1)].width = max_len[indx]
         wb.save(xlsx_p)
 
-csv_to_xlsx('data/samples/people.csv', 'data/out/people.xlsx')
+csv_to_xlsx('data/samples/cities.csv', 'data/out/people.xlsx')
