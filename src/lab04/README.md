@@ -15,7 +15,8 @@ _Создает/перезаписывает CSV с разделителем_
 ![Демонстрация второй функции](/images/lab004/.......)  
 `write_csv(rows: list[tuple | list], path: str | Path, header: tuple[str, ...] | None = None) -> None`  
   
-
+---
+  
 **Задание B — скрипт src/lab04/text_report.py**  
 *Файл*: [text_report.py](text_report.py)  
 *Ввод*: [test_report.py](test_report.py)  
