@@ -2,7 +2,7 @@
   
 **Задание A — JSON ↔ CSV**  
 *Файл*: [json_csv.py](json_csv.py)  
-*Ввод*:   {name1}.json / {name1}.csv  
+*Ввод*:  {name1}.json / {name1}.csv  
 *Вывод*: {name2}.csv / {name2}.json  
   
 _**Перевести из json в csv**_
