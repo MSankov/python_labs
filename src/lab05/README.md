@@ -18,8 +18,8 @@ _**Перевести из csv в json**_
 ![Демонстрация первой функции](/images/lab05/json2.png)    
 `csv_to_json('data/samples/people.csv', 'data/out/people_from_csv.json')`  
   
+---
   
-
 **Задание B — CSV → XLSX**  
 *Файл*: [csv_xlsx.py](csv_xlsx.py)  
 *Ввод*: {name1}.csv
