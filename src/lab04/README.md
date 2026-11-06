@@ -35,6 +35,6 @@ _Читает один входной файл data/input.txt, Нормализ�
   
 _Считает частоты по каждому файлу отдельно → data/report_per_file.csv со столбцами: (file,word,count) и формирует сводный отчёт по всем файлам вместе → data/report_total.csv_  
 ![Демонстрация программы](/images/lab04/lab04rep_per_file.png)
-![Демонстрация программы](/images/lab04/lab04total_rep.png)
+![Демонстрация программы](/images/lab04/lab04total_rep.png)  
 `Пример запуска: python src/lab04/text_report.py --in data/a.txt data/b.txt --per-file data/report_per_file.csv --total data/report_total.csv` 
   
