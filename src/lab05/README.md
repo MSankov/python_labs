@@ -2,8 +2,8 @@
   
 **Задание A — JSON ↔ CSV**  
 *Файл*: [json_csv.py](json_csv.py)  
-*Ввод*: {name1}.json / {name1}.csv
-*Вывод*: {name2}.csv / {name2}.json
+*Ввод*: {name1}.json / {name1}.csv  
+*Вывод*: {name2}.csv / {name2}.json  
   
 _**Перевести из json в csv**_
 ![Демонстрация первой функции](/images/lab05/json1.png)  
@@ -22,8 +22,8 @@ _**Перевести из csv в json**_
   
 **Задание B — CSV → XLSX**  
 *Файл*: [csv_xlsx.py](csv_xlsx.py)  
-*Ввод*: {name1}.csv
-*Вывод*: {name2}.xlsx
+*Ввод*: {name1}.csv  
+*Вывод*: {name2}.xlsx  
   
 _**Перевести из csv в xlsx**_  
 ![Демонстрация второй функции](/images/lab05/csv3.png)  
