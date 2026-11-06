@@ -6,13 +6,13 @@
 *Вывод*: тест кейсы
   
 _Открывает файл на чтение в указанной кодировке и возвращает содержимое как одну строку_  
-![Демонстрация первой функции](/images/lab004/.......)  
+![Демонстрация первой функции](/images/lab04/lab04rt.png)  
 `read_text(path: str | Path, encoding: str = "utf-8") -> str`  
   
 ---
   
 _Создает/перезаписывает CSV с разделителем_  
-![Демонстрация второй функции](/images/lab004/.......)  
+![Демонстрация второй функции](/images/lab04/lab04write_csv.png)  
 `write_csv(rows: list[tuple | list], path: str | Path, header: tuple[str, ...] | None = None) -> None`  
   
 ---
@@ -23,7 +23,7 @@ _Создает/перезаписывает CSV с разделителем_
 *Вывод*: тест кейсы  
   
 _Читает один входной файл data/input.txt, Нормализует текст (lib/text.py), токенизирует и считает частоты слов и сохраняет data/report.csv c колонками: (word,count), отсортированными: count ↓, слово ↑_
-![Демонстрация программы](/images/lab004/.......)  
+![Демонстрация программы](/images/lab04/lab04rep.png)  
 `Пример запуска: python src/lab04/text_report.py` 
   
 ---  
@@ -34,6 +34,7 @@ _Читает один входной файл data/input.txt, Нормализ�
 *Вывод*: тест кейсы
   
 _Считает частоты по каждому файлу отдельно → data/report_per_file.csv со столбцами: (file,word,count) и формирует сводный отчёт по всем файлам вместе → data/report_total.csv_  
-![Демонстрация программы](/images/lab004/.......)  
+![Демонстрация программы](/images/lab04/lab04rep_per_file.png)
+![Демонстрация программы](/images/lab04/lab04total_rep.png)
 `Пример запуска: python src/lab04/text_report.py --in data/a.txt data/b.txt --per-file data/report_per_file.csv --total data/report_total.csv` 
   
