@@ -39,4 +39,4 @@ def write_csv(rows: Iterable[Sequence], path: str | Path,
         for r in rows:
             w.writerow(r)
 
-#print(read_text(r'data/lab04/input.txt'))
+print(read_text(r'data/lab04/input.txt'))
