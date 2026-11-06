@@ -13,10 +13,11 @@ _**Перевести из json в csv**_
   
 ---
   
-_Перевести из csv в json_  
+_**Перевести из csv в json**_  
 ![Демонстрация второй функции](/images/lab05/csv2.png)  
 ![Демонстрация первой функции](/images/lab05/json2.png)    
 `csv_to_json('data/samples/people.csv', 'data/out/people_from_csv.json')`  
+  
   
 
 **Задание B — CSV → XLSX**  
@@ -24,7 +25,7 @@ _Перевести из csv в json_
 *Ввод*: {name1}.csv
 *Вывод*: {name2}.xlsx
   
-_Перевести из csv в xlsx_  
+_**Перевести из csv в xlsx**_  
 ![Демонстрация второй функции](/images/lab05/csv3.png)  
 ![Демонстрация первой функции](/images/lab05/xlsx3.png)    
 `csv_to_xlsx('data/samples/people.csv', 'data/out/people.xlsx')`  
