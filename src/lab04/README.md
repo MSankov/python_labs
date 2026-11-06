@@ -5,20 +5,21 @@
 *Ввод*: [test.py](test.py)
 *Вывод*: тест кейсы
   
-_Открывает файл на чтение в указанной кодировке и возвращает содержимое как одну строку_
-![Демонстрация первой функции](/images/lab004/.......)
-`read_text(path: str | Path, encoding: str = "utf-8") -> str` 
+_Открывает файл на чтение в указанной кодировке и возвращает содержимое как одну строку_  
+![Демонстрация первой функции](/images/lab004/.......)  
+`read_text(path: str | Path, encoding: str = "utf-8") -> str`  
   
 ---
   
-_Создает/перезаписывает CSV с разделителем_
+_Создает/перезаписывает CSV с разделителем_  
 ![Демонстрация второй функции](/images/lab004/.......)  
 `write_csv(rows: list[tuple | list], path: str | Path, header: tuple[str, ...] | None = None) -> None`  
+  
 
 **Задание B — скрипт src/lab04/text_report.py**  
 *Файл*: [text_report.py](text_report.py)  
-*Ввод*: [test_report.py](test_report.py)
-*Вывод*: тест кейсы
+*Ввод*: [test_report.py](test_report.py)  
+*Вывод*: тест кейсы  
   
 _Читает один входной файл data/input.txt, Нормализует текст (lib/text.py), токенизирует и считает частоты слов и сохраняет data/report.csv c колонками: (word,count), отсортированными: count ↓, слово ↑_
 ![Демонстрация программы](/images/lab004/.......)  
