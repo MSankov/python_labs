@@ -2,8 +2,6 @@
   
 **CLI‑утилиты с argparse**  
   
----
-  
 **Задание А — Подкоманды в одном CLI**  
 *Файл*: [cli_text.py](src/lab06/cli_text.py)  
   
