@@ -7,7 +7,7 @@
   
 _**Анализ частот слов в тексте (stats)**_  
 Анализ частоты слов в тексте с использованием функций из `lab03`.   
-![Демонстрация stats выполнение](images/lab06/lab6stats.png)  
+![Демонстрация stats выполнение](/images/lab06/lab6stats.png)  
 `python src/lab06/cli_text.py stats --input data/samples/text.txt --top 5`  
 `python src/lab06/cli_text.py stats --help`  
   
@@ -15,7 +15,7 @@ _**Анализ частот слов в тексте (stats)**_
   
 _**Вывод содержимого файла (cat)**_  
 Построчный вывод содержимого файла с возможностью нумерации строк.  
-![Демонстрация cat выполнение](images/lab06/lab6cat.png)  
+![Демонстрация cat выполнение](/images/lab06/lab6cat.png)  
 `python src/lab06/cli_text.py cat --input data/samples/text.txt -n`  
 `python src/lab06/cli_text.py cat --help`  
   
