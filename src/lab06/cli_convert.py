@@ -27,7 +27,7 @@ def main():
         Вызываем код в зависимости от аргументов.
     """
     if args.cmd == "json2csv":
-            json_to_csv(args.st, args.out)
+        json_to_csv(args.st, args.out)
     elif args.cmd == "csv2json":
         csv_to_json(args.st, args.out)
     elif args.cmd == "csv2xlsx":

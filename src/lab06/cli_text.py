@@ -19,21 +19,27 @@ def main():
     args = parser.parse_args()
 
     if args.command == "cat":
-        s = read_text(Path(args.input))
-        m = s.split('\n')
-        if args.n is not None:
-            for n in range(len(m)):
-                print(f'{n+1}) {m[n]}')
+        path = Path(args.input)
+        text = read_text(path)
+        lines = text.splitlines()
+        if args.n:
+            for i, line in enumerate(lines, start=1):
+                print(f"{i:>4}  {line}")
         else:
-            for el in m:
-                print(el)
+            for line in lines:
+                print(line)
 
         
     elif args.command == "stats":
-        s = read_text(Path(args.input))
-        s = normalize()
-        l = tokenize(s)
-        l = count_freq(l)
-        print(top_n(l))
+        path = Path(args.input)
+        text = read_text(path)
+        norm_text = normalize(text)
+        tokens = tokenize(norm_text)
+        freq = count_freq(tokens)
+        top_words = top_n(freq, args.top)
+        print(f"Топ-{args.top} слов:")
+        for word, count in top_words:
+            print(f"{word}: {count}")
 
-        
+if __name__ == "__main__":
+    main()
