@@ -7,7 +7,7 @@ def linear_search(nums, x):
         if nums[n] == x:
             return n
             break
-    return '-1'
+    return -1
 
 ''' 
 print(linear_search([4, 2, 7, 2], 2))
@@ -32,7 +32,7 @@ def binary_search(sorted_nums, x):
             if sorted_nums[n] == x:
                 return n
                 break
-        return '-1'
+        return -1
 
 '''
 print(binary_search([1, 3, 5, 7], 5))
@@ -55,16 +55,22 @@ def two_sum_brute(nums, target):
                 return (i,j)
     return None
     
-print(two_sum_brute([2, 7, 11, 15], 9))
-print(two_sum_brute([1, 2], 10))
+'''print(two_sum_brute([2, 7, 11, 15], 9))
+print(two_sum_brute([1, 2], 10))'''
  
  
 def two_sum_fast(nums, target):
     """То же, что two_sum_brute, но за один проход со словарём."""
-    sl = {}
+    sl = {}  # значение -> индекс
+    for j, v in enumerate(nums):
+        n = target - v
+        if n in sl:
+            i = sl[n]
+            return (i, j)   # i всегда < j: i записан на более ранней итерации
+        if v not in sl:   #первое вхождение значения
+            sl[v] = j
+    return None
 
+'''print(two_sum_brute([2, 7, 11, 15], 9))
+print(two_sum_brute([1, 2], 10))'''
 
-
-
-
-    pass
